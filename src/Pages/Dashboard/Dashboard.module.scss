@@ -1,0 +1,430 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.dashboardContentFrame{
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .dashContentFrame{
+        width: 100%;
+        // padding: 30px;
+        // margin-right: 5px;
+
+    }
+}
+.state300{
+    background-color: $state300;
+}
+.blue300{
+    background-color: $blue300;
+}
+.green300{
+    background-color: $green300;
+}
+
+.dashboardSideMenuFrame{
+    width: 220px;
+    height: calc(100vh - 15px);
+    display: inline-table;
+    border-right: 1px solid $lightSilver;
+    padding: 15px 20px 0 0;
+    margin-right: 10px;
+    .dashboardSideSignature{
+        color: darken($middleSilver, 3);
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: 100;
+        text-transform: uppercase;
+        cursor: default;
+    }
+    
+    .dashboardItemStyle{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 46px;
+        font-size: 14px;
+        color: $darkSilver;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .dashboardItemIconStyle{
+        color: $lightSilverIconColor;
+        position: relative;
+        top: 0;
+        font-size: 20px;
+        margin-right: 18px;
+    }
+    .dashboardAccordionMenuItem{
+        box-shadow: none !important;
+        .collapseMenuHeader{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 46px;
+            font-size: 15px;
+            color: $darkSilver;
+            font-weight: 600;
+            padding: 0 !important;
+            .collapseArrowDown{
+                font-size: 18px;
+            }
+        }
+        &::before{
+            background-color: transparent !important;
+        }
+    }
+    .MuiAccordionSummary-content.Mui-expanded{
+        margin: 0 !important;
+    }
+    .collapseMenu{
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+    .menuSectionLabel{
+        font-size: 12px;
+        font-weight: 600;
+        margin: 25px 0 0;
+        color: lighten($middleSilver, 15);
+    }
+    .createNewPlanFrame{
+        display: flex;
+        align-items: center;
+        border-top: 1px solid $lightSilver;
+        border-bottom: 1px solid $lightSilver;
+        padding: 20px 0;
+        .createNewPlanButton{
+            width: 100%;
+            padding: 8px 0;
+            background-color: #000;
+            @include borderRadius(100px);
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 15px;
+        }
+    }
+}
+.mainDashboardContentFrame{
+    padding: 15px 0;
+    .dashboardLgPageMainTitle{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h2{
+            color: $titleColorOnWhite;
+            font-size: 24px;
+            font-family: "Calibri Light";
+        }
+        h4{
+            color: lighten($titleColorOnWhite, 17);
+            font-size: 12px;
+            font-family: "Calibri Light";
+        }
+    }
+    .dashboardMdPageMainTitle{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h2{
+            color: $titleColorOnWhite;
+            font-size: 18px;
+            font-family: "Calibri Light";
+        }
+        h4{
+            color: lighten($titleColorOnWhite, 17);
+            font-size: 11px;
+            font-family: "Calibri Light";
+        }
+    }
+}
+.footprintQuickViewFrame{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    .eachFootprintQuickViewFrame{
+        width: 28%;
+        padding: 15px 15px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include borderRadius(25px);
+        .footprintQuickViewIcon{
+            font-size: 20px;
+            padding: 10px;
+            @include borderRadius(100px);
+        }
+        .eachFootprintQuickViewDetails{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 5px 0 20px;
+            justify-content: space-between;
+            align-items: flex-end;
+            .leftFrame{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                h4{
+                    font-family: "Calibri Light";
+                    color: $blackTitleColor;
+                    font-size: 22px;
+                }
+                h5{
+                    font-family: "Calibri Light";
+                    color: lighten($blackTitleColor, 10);
+                    font-size: 12px;
+                }
+            }
+            .rightFrame{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                h4{
+                    font-family: "Calibri Light";
+                    color: $blackTitleColor;
+                    font-size: 20px;
+                }
+                h5{
+                    font-family: "Calibri Light";
+                    color: lighten($blackTitleColor, 10);
+                    font-size: 12px;
+                }
+            }
+        }
+        .approximateIcon{
+            font-size: 36px;
+            display: flex;
+            align-items: flex-start;
+            padding: 0;
+            color: $middleSilver;
+        }
+    }
+    .state100{
+        background-color: $state100;
+    }
+    .blue100{
+        background-color: $blue100;
+    }
+    .green100{
+        background-color: $green100;
+    }
+    .progressbarFrame{
+        width: 100%;
+        height: 3px;
+        background-color: darken($lightSilver, 8);
+        position: relative;
+        @include borderRadius(100px);
+        .progressbarStyle{
+            position: absolute;
+            top: 0;
+            height: 3px;
+            background-color: $darkSilver;
+            @include borderRadius(100px);
+        }
+    }
+    .percentFrame{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 5px;
+        .percentText{
+            font-size: 16px;
+            font-weight: 900;
+            font-family: "Calibri";
+            color: $blackTitleColor;
+        }
+        .staticText{
+            font-size: 11px;
+            font-family: "Calibri Light";
+            color: $middleSilver;
+        }
+    }
+}
+.footprintBottomReg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .footprintTitleAndTab{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .linearDiagramFrame{
+        width: 65%;
+        min-height: 300px;
+        .titleFrame{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h4{
+                color: $titleColorOnWhite;
+                font-size: 18px;
+                font-family: "Calibri Light";
+            }
+            h6{
+                color: lighten($titleColorOnWhite, 17);
+                font-size: 11px;
+                font-family: "Calibri Light";
+            }
+        }
+        .tabContentFrame{
+            position: relative;
+            margin-top: 20px;
+            // height: 200px;
+        }
+    }
+    .tabBarFrame{
+        min-width: 220px;
+        min-height: 28px;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-between;
+        border: 1px solid darken($lightSilver, 3);
+        @include borderRadius(100px);
+        li{
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            cursor: pointer;
+            @include borderRadius(100px);
+            @include transitionMaker(0.2s);
+        }
+        .tabStyle{
+            background-color: #fff;
+            color: #000;
+        }
+        .activeTabStyle{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    .pieFrame{
+        position: relative;
+        width: 25%;
+        background-color: #000;
+        @include borderRadius(25px);
+        padding: 10px 15px;
+        .title{
+            color: #fff;
+            font-family: "Calibri Light";
+            text-align: center;
+            font-weight: 100;
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+        .percentFrame{
+            position: absolute;
+            color: red;
+            top: 0;
+        }
+        .darkSelectOptionFrame{
+            position: relative;
+            background-color: transparent;
+            border: 1px solid $darkSilver;
+            height: 45px;
+            @include borderRadius(5px);
+            .darkSelectOptionStyle{
+                height: 46px;
+                font-size: 14px;
+                width: 100%;
+                color: transparent !important;
+                outline: none !important;
+                & > div{
+                    // background: rgb(0, 255, 13);
+                    position: absolute;
+                    padding: 0 10px;
+                    left: 0;
+                    width: 90%;
+                    height: 44px;
+                    display: flex;
+                    align-items: center;
+                }
+                svg{
+                    color: $middleSilver !important;
+                }
+            }
+            .MuiOutlinedInput-notchedOutline{
+                border-color: red !important;
+            }
+
+            .inputLabel{
+                position: absolute;
+                width: 100%;
+                height: 42px;
+                color: $lightSilver !important;
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+                font-size: 12px;
+            }
+
+        }
+
+    }
+}
+
+.darkSelectMenuItem{
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 5px 15px;
+    font-size: 13px !important;
+    font-family: 'Calibri Light';
+}
+.dashboardContentFrame{
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .dashContentFrame{
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    .footprintQuickViewFrame{
+        flex-direction: column;
+        .eachFootprintQuickViewFrame{
+            width: 100% !important;
+            margin-bottom: 25px;
+        }
+    }
+    .footprintBottomReg{
+        flex-direction: column;
+        .linearDiagramFrame{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    .footprintTitleAndTab{
+        flex-direction: column !important;
+        .tabBarFrame{
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
