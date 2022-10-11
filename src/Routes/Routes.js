@@ -41,7 +41,7 @@ const Router = () => {
                     <DashboardLayout path='/groupSend' exact component={GroupSend} />
                     <AuthWebsiteLayout path='/signIn' component={SignIn} />
                     <AuthWebsiteLayout path='/signUp' component={SignUp} />
-                    <MainWebsiteLayout component={MainPage} />
+                    <DashboardLayout component={MainPage} />
                 </Switch>
             </React.Suspense>
         </BrowserRouter>
